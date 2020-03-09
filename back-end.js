@@ -42,7 +42,7 @@ const crazify = function(str) {
       crazyI++;
     }
   }
-
+  console.log('hellll')
   return crazified;
 }
 
