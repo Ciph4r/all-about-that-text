@@ -4,8 +4,10 @@ const ul = document.querySelector('.result')
 
 const printValue = (text) => {
 const li = document.createElement('li')
+x.setAttribute("type", "checkbox");
 ul.appendChild(li)
 li.innerText = text
+li.addEventListener('click',clearOne)
 }
 
 const clearValue = () => {
@@ -17,6 +19,10 @@ const allLi = document.querySelectorAll('li')
    }
 }
 
+const clearOne = (event) =>{
+    event.target.remove()
+    
+}
 
 
 const searchBar = document.querySelector('#user-input')
@@ -26,9 +32,8 @@ const searchBar = document.querySelector('#user-input')
 
 const bigButton = document.querySelector('.biggify')
 const bigAns = () => {
-
-
-    clearValue()
+   
+    // clearValue()
     if (!searchBar.value)
     return printValue('Bro, put something in me...no homo!')
     printValue(biggify(Number(searchBar.value)))
@@ -42,11 +47,21 @@ bigButton.addEventListener('click',bigAns)
 
 
 
+
+
+
+
+
+
+
+
+
+
 const bigNasty = document.querySelector('.nasafy')
 
 
 const shittyFunction = () => {
-    clearValue()
+    // clearValue()
     if (!searchBar.value)
     return printValue('Bro, put something in me...no homo!')
     const bigGucci = nasafy(Number(searchBar.value))
@@ -57,12 +72,20 @@ const shittyFunction = () => {
     searchBar.focus();
 }
 
+
+
+
+
+
+
+
+
 bigNasty.addEventListener('click',shittyFunction)
 
 const crazyify = document.querySelector('.crazify')
 
 const myOtherShittyFunction = (val) => {
-    clearValue()
+    // clearValue()
     if (!searchBar.value)
     return printValue('Bro, put something in me...no homo!')
     printValue(val)
@@ -87,7 +110,7 @@ myOtherShittyFunction(reversify(searchBar.value))
 
 const title = document.querySelector('.titleify')
 const titles = () => {
-    clearValue();
+    // clearValue();
     if (!searchBar.value)
     return printValue('Bro, put something in me...no homo!')
     printValue(titleify(searchBar.value))
@@ -96,6 +119,9 @@ const titles = () => {
 }
 title.addEventListener('click', titles )
 
+
+const x = document.createElement("INPUT");
+x.setAttribute("type", "checkbox");
 
 
 
